@@ -1,0 +1,171 @@
+﻿  Account.cpp
+  AdvancedBankManagementSystem.cpp
+  BankAccount.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,82): error C2558: class 'Transaction': no copy constructor available or copy constructor is declared 'explicit'
+  (compiling source file 'BankAccount.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xmemory(723,82):
+  the template instantiation context (the oldest one first) is
+  	C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\BankAccount.h(12,26):
+  	see reference to class template instantiation 'std::list<Transaction,std::allocator<Transaction>>' being compiled
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\list(1257,10):
+  	while compiling class template member function 'void std::list<Transaction,std::allocator<Transaction>>::push_back(const _Ty &)'
+          with
+          [
+              _Ty=Transaction
+          ]
+  		C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\BankAccount.cpp(42,27):
+  		see the first reference to 'std::list<Transaction,std::allocator<Transaction>>::push_back' in 'BankAccount::addTransaction'
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\list(1258,9):
+  	see reference to function template instantiation 'std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer> *std::list<_Ty,_Alloc>::_Emplace<const _Ty&>(std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer> *const ,const _Ty &)' being compiled
+          with
+          [
+              _Ty=Transaction,
+              _Alloc=std::allocator<Transaction>
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\list(1018,44):
+  	see reference to function template instantiation 'std::_List_node_emplace_op2<std::allocator<std::_List_node<_Ty,std::_Default_allocator_traits<_Alloc>::void_pointer>>>::_List_node_emplace_op2<const _Ty&>(_Alnode &,const _Ty &)' being compiled
+          with
+          [
+              _Ty=Transaction,
+              _Alloc=std::allocator<Transaction>,
+              _Alnode=std::allocator<std::_List_node<Transaction,std::_Default_allocator_traits<std::allocator<Transaction>>::void_pointer>>
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\list(585,25):
+  	see reference to function template instantiation 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,const _Ty&>(_Alloc &,_Objty *const ,const _Ty &)' being compiled
+          with
+          [
+              _Alloc=std::allocator<std::_List_node<Transaction,std::_Default_allocator_traits<std::allocator<Transaction>>::void_pointer>>,
+              _Ty=Transaction,
+              _Objty=Transaction
+          ]
+  
+  CoreLogic.cpp
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreLogic.cpp(57,36): error C2039: 'userLogin': is not a member of 'CoreData'
+  C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.h(13,7):
+  see declaration of 'CoreData'
+  
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreLogic.cpp(57,45): error C2440: '=': cannot convert from 'void' to 'Account *'
+  C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreLogic.cpp(57,45):
+  Expressions of type void cannot be converted to other types
+  
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreLogic.cpp(63,49): error C2440: '=': cannot convert from 'void' to 'Account *'
+  C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreLogic.cpp(63,49):
+  Expressions of type void cannot be converted to other types
+  
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreLogic.cpp(78,27): error C2039: 'options': is not a member of 'Account'
+  C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\Account.h(4,7):
+  see declaration of 'Account'
+  
+  CoreData.cpp
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28): error C2597: illegal reference to non-static member 'CoreData::users'
+  C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.h(15,28):
+  see declaration of 'CoreData::users'
+  
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28): error C3535: cannot deduce type for 'auto &&' from 'unknown'
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28): error C2440: 'initializing': cannot convert from 'unknown' to 'int &&'
+  C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  Reason: cannot convert from 'unknown' to 'int'
+  C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  ill-formed reference to a non-static member
+  
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28): error C2672: 'begin': no matching overloaded function found
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1824,27):
+  could be '_Ty *std::begin(_Ty (&)[_Size]) noexcept'
+  	C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  	'_Ty *std::begin(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'int'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1806,30):
+  or       'unknown-type std::begin(const _Container &) noexcept(<expr>)'
+  	C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  	Failed to specialize function template 'unknown-type std::begin(const _Container &) noexcept(<expr>)'
+  		C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  		With the following template arguments:
+  			C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  			'_Container=int'
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1807,23):
+  		left of '.begin' must have class/struct/union
+  			C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1807,23):
+  			type is 'const _Container'
+          with
+          [
+              _Container=int
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1800,30):
+  or       'unknown-type std::begin(_Container &) noexcept(<expr>)'
+  	C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  	Failed to specialize function template 'unknown-type std::begin(_Container &) noexcept(<expr>)'
+  		C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  		With the following template arguments:
+  			C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  			'_Container=int'
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1801,23):
+  		left of '.begin' must have class/struct/union
+  			C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1801,23):
+  			type is '_Container'
+          with
+          [
+              _Container=int
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\initializer_list(54,35):
+  or       'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept'
+  	C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  	'const _Elem *std::begin(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int'
+  
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28): error C2672: 'end': no matching overloaded function found
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1829,27):
+  could be '_Ty *std::end(_Ty (&)[_Size]) noexcept'
+  	C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  	'_Ty *std::end(_Ty (&)[_Size]) noexcept': could not deduce template argument for '_Ty (&)[_Size]' from 'int'
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1818,30):
+  or       'unknown-type std::end(const _Container &) noexcept(<expr>)'
+  	C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  	Failed to specialize function template 'unknown-type std::end(const _Container &) noexcept(<expr>)'
+  		C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  		With the following template arguments:
+  			C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  			'_Container=int'
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1819,23):
+  		left of '.end' must have class/struct/union
+  			C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1819,23):
+  			type is 'const _Container'
+          with
+          [
+              _Container=int
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1812,30):
+  or       'unknown-type std::end(_Container &) noexcept(<expr>)'
+  	C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  	Failed to specialize function template 'unknown-type std::end(_Container &) noexcept(<expr>)'
+  		C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  		With the following template arguments:
+  			C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  			'_Container=int'
+  		C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1813,23):
+  		left of '.end' must have class/struct/union
+  			C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\xutility(1813,23):
+  			type is '_Container'
+          with
+          [
+              _Container=int
+          ]
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\initializer_list(59,35):
+  or       'const _Elem *std::end(std::initializer_list<_Elem>) noexcept'
+  	C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28):
+  	'const _Elem *std::end(std::initializer_list<_Elem>) noexcept': could not deduce template argument for 'std::initializer_list<_Elem>' from 'int'
+  
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28): error C3536: '<begin>$L0': cannot be used before it is initialized
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,28): error C3536: '<end>$L0': cannot be used before it is initialized
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\CoreData.cpp(37,33): error C2100: illegal indirection
+  FileUtility.cpp
+  Transaction.cpp
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\Transaction.cpp(19,30): error C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  UserAccount.cpp
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\UserAccount.cpp(7,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\UserAccount.cpp(12,1): error C2512: 'BankAccount': no appropriate default constructor available
+  C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\BankAccount.h(8,7):
+  see declaration of 'BankAccount'
+  
+C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\UserAccount.cpp(18,1): error C2512: 'BankAccount': no appropriate default constructor available
+  C:\Users\tcbut\source\repos\AdvancedBankManagementSystem\BankAccount.h(8,7):
+  see declaration of 'BankAccount'
+  
+  Generating Code...
